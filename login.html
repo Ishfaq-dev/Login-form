@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Welcome Message -->
+        <h1>Welcome to my <span>Registration form</span>!</h1>
+        <p>Sign up to explore!</p>
+        
+        <!-- Registration Form -->
+        <form id="form-container">
+            <!-- Full Name Field -->
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <div class="input-container">
+                    <input type="text" id="name" placeholder="Enter Your Name">
+                </div>
+                <span class="error-message" id="name-error"></span>
+            </div>
+            
+            <!-- Email Address Field -->
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <div class="input-container">
+                    <input type="email" id="email" placeholder="Enter your Email">
+                </div>
+                <span class="error-message" id="email-error"></span>
+            </div>
+            
+            <!-- Password Field -->
+            <div class="form-group">
+                <label for="password">Password *</label>
+                <div class="input-container">
+                    <input type="password" id="password" placeholder="Enter your Password">
+                </div>
+                <span class="error-message" id="password-error"></span>
+            </div>
+            
+            <!-- Terms and Conditions Checkbox -->
+            <div class="form-check">
+                <input type="checkbox" id="terms">
+                <label for="terms">I agree to the <a href="#">Terms & Conditions *</a></label>
+                <span class="error-message" id="terms-error"></span>
+            </div>
+            
+            <!-- Newsletter Checkbox -->
+            <div class="form-check">
+                <input type="checkbox" id="newsletter">
+                <label for="newsletter">I want to receive <a href="#">Newsletter</a></label>
+                <span class="error-message" id="newsletter-error"></span>
+            </div>
+            
+            <!-- Submit Button -->
+            <button type="submit" id="sub-btn" class="btn">Sign Up</button>
+        </form>
+    </div>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,832 @@
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #F7FBFA;
+}
+
+/* Entire scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Scrollbar track */
+::-webkit-scrollbar-track {
+    background: #fcfcfc;
+    border-radius: 10px;
+}
+
+/* Scrollbar handle */
+::-webkit-scrollbar-thumb {
+    background: #8b8b8b;
+    border-radius: 10px;
+}
+
+/* Scrollbar handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #404040;
+    /* Handle color on hover */
+}
+
+
+/* Navbar */
+header {
+    background-color: #F7FBFA;
+    padding: 20px;
+    z-index: 1;
+    position: relative;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: -1;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 24px 0;
+}
+
+.logo-container img {
+    height: 2.7rem;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #625e5e;
+    font-size: 16px;
+}
+
+.nav-links li a::before {
+    content: '|';
+    margin: 0 16px;
+}
+
+.nav-links li:first-child a::before {
+    content: none;
+}
+
+.nav-links li a:hover {
+    color: #F59321;
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #f8f8f8;
+}
+
+.hero-content {
+    width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    color: #333;
+}
+
+.hero-content h1 img {
+    position: absolute;
+    left: 16.8rem;
+    top: 22rem;
+}
+
+.highlight {
+    color: orange;
+    border: 2px solid #F59321;
+    padding: 2px 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.hero-btns {
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #fff;
+    color: #ff9000;
+    width: 15.8rem;
+    border: none;
+    outline: 1px solid #ff9000;
+    padding: 18px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .3s ease;
+    margin: 0 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background-color: #ff9000;
+    color: #fff;
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.3);
+}
+
+.hero-image {
+    max-width: 50%;
+    position: relative;
+}
+
+.hero-image .hero-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.hero-image .side-img {
+    position: absolute;
+    top: 17rem;
+    right: 69rem;
+    width: 130px;
+    height: 26rem;
+}
+
+/* Categories section */
+.statistics-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.stat-box {
+    text-align: center;
+    color: #ff9000;
+    margin: 0 15px;
+    background-color: #434543;
+    padding: 20px 14px;
+    border-radius: 20px;
+}
+
+.stat-box img {
+    position: relative;
+    display: flex;
+    left: 106px;
+}
+
+.stat-number {
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.stat-label {
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.categories-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0;
+    background-color: #fff;
+}
+
+.category-box {
+    position: relative;
+    width: 30.5%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 10px -10px 0px #434543;
+}
+
+.category-box h1 {
+    position: absolute;
+    margin: 92px 140px;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.category-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 400px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d78732;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: top .4s ease;
+}
+
+.category-box:hover .overlay {
+    top: 0;
+}
+
+.category-title {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Process section */
+.process-section {
+    background-color: #F7F1E8;
+    padding-top: 3rem;
+    overflow: hidden;
+}
+
+.process-header {
+    text-align: center;
+    font-size: 18px;
+}
+
+.process-header h4 {
+    color: #FC860B;
+    font-family: Arial, sans-serif;
+}
+
+.process-header h2 {
+    color: #434543;
+    margin-top: 12px;
+    font-family: "Roboto Mono", monospace;
+}
+
+.process-buttons {
+    display: flex;
+    border-radius: 25px;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.process-btn {
+    background-color: #f4861f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 12rem;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#startups-button {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+#investors-button {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: white;
+    color: #f4861f;
+}
+
+.process-main {
+    margin-top: -6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+}
+
+.main-img {
+    width: 55rem;
+}
+
+.side-img-1 {
+    position: absolute;
+    left: 0;
+    width: 10rem;
+    top: 14rem;
+}
+
+.side-img-2 {
+    position: absolute;
+    left: 69rem;
+    width: 23.5rem;
+    height: 38rem;
+    top: -18rem;
+}
+
+/* Stats section */
+.stats-section {
+    text-align: center;
+    padding: 3rem;
+    background-color: #fff;
+    height: 75vh;
+}
+
+.main-title {
+    color: #FC860B;
+    font-family: Arial, sans-serif;
+}
+
+.stats-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: "Roboto Mono", monospace;
+    margin-top: 0.8rem;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.stat-item {
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    gap: 10px;
+    padding: 10px;
+}
+
+.stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.3rem 2rem;
+}
+
+.stat-icon img {
+    width: 100px;
+    height: 80px;
+    margin-bottom: 2.5rem;
+}
+
+.stat-value {
+    font-size: 30px;
+    font-weight: bold;
+    color: #323232;
+}
+
+.stat-description {
+    font-size: 14px;
+    font-weight: normal;
+    color: #323232;
+}
+
+/* Event section */
+.event img {
+    height: 100%;
+    width: 100%;
+}
+
+.event #view-event-button {
+    position: relative;
+    top: -100px;
+    left: 63rem;
+    border-radius: 6px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+.event .process-btn:hover {
+    background-color: #fff;
+    color: #ff9000;
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Gov-Linkages section */
+.gov-linkages-section {
+    position: relative;
+    width: 100%;
+    height: 140vh;
+    background-color: #fff;
+    overflow: hidden;
+    margin-top: -1rem;
+}
+
+.gov-linkages-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 160%;
+    background: url('images/ignite3.png') no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+}
+
+.gov-linkages-background img {
+    position: absolute;
+    left: 67rem;
+    top: -10rem;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.gov-linkages-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    text-align: center;
+}
+
+.gov-linkages-title {
+    font-size: 2.8rem;
+    color: #333;
+    margin-top: 5rem;
+}
+
+.gov-linkages-button {
+    font-size: 1rem;
+    color: #fff;
+    background-color: #FC860B;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.gov-linkages-cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.linkage-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.linkage-card {
+    position: relative;
+    width: 450px;
+    height: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    border: 0.0001rem solid #126f2e;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.linkage-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    border: none;
+}
+
+#first {
+    top: 0rem;
+    left: 29rem;
+    z-index: 1;
+}
+
+#second {
+    z-index: 2;
+    left: 25rem;
+    top: 8rem;
+}
+
+#third {
+    top: 22.5rem;
+    left: -21rem;
+    z-index: 3;
+
+}
+
+.linkage-card-logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+
+.linkage-card-description {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.linkage-card-button {
+    font-size: 14px;
+    color: #FC860B;
+    background-color: #fff;
+    border: 2px solid #FC860B;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.linkage-card-button:hover {
+    background-color: #FC860B;
+    color: #fff;
+}
+
+/* Startup section */
+.startup-assistance-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.startup-assistance-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-image: url('images/bg-office.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.startup-assistance-title {
+    position: relative;
+    z-index: 2;
+    font-size: 4rem;
+    color: #fff;
+    margin: 0px 1rem;
+}
+
+.startup-assistance-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 36rem;
+}
+
+.startup-assistance-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-right: 2rem;
+}
+
+.startup-assistance-button {
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #FC860B;
+    border: none;
+    padding: 1rem 3rem;
+    width: 250px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#incubators {
+    background-color: #434543;
+    color: #FC860B;
+}
+
+.startup-assistance-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.startup-assistance-info {
+    background-color: #434543;
+    padding: 3rem 2rem;
+    border-radius: 5px;
+    color: #FC860B;
+    text-align: left;
+    width: 380px;
+    height: 380px;
+}
+
+.startup-assistance-info p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #FC860B;
+}
+
+.startup-assistance-info ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+}
+
+.startup-assistance-info li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #FC860B;
+}
+
+/* Subscription section */
+.subscription-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://startupconnect.pk/images/light-city.svg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding-top: 4rem;
+}
+
+.subscription-background {
+    padding: 2rem;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+}
+
+.subscription-title {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.subscription-subtitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.subscription-description {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.subscription-input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.subscription-input {
+    padding: 1rem;
+    font-size: 1rem;
+    border: 2px solid #fff;
+    border-right: none;
+    border-radius: 30px 0 0 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+    width: 100%;
+    max-width: 500px;
+    backdrop-filter: blur(10px);
+}
+
+.subscription-input::placeholder {
+    color: white;
+}
+
+.subscription-button {
+    padding: 0.6rem 3rem;
+    font-size: 1.5rem;
+    border: 2px solid #fff;
+    border-radius: 0 30px 30px 0;
+    background-color: #FC860B;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 0px;
+}
+
+.subscription-button:after {
+    content: '→';
+    font-size: 1.5rem;
+    display: inline-block;
+    margin-left: 0.5rem;
+}
+
+/* Ignite section */
+.ignite-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.ignite-header {
+    background-color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.ignite-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.ignite-logo {
+    max-height: 50px;
+}
+
+.ministry-logo {
+    height: 70px;
+}
+
+.ignite-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 2rem;
+}
+
+.ignite-nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.ignite-nav-link:hover {
+    color: #FC860B;
+}
+
+.ignite-social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.ignite-social-link {
+    display: block;
+}
+
+.ignite-social-icon {
+    width: 40px;
+    height: 43px;
+    border: 2px solid #544C40;
+    border-radius: 50%;
+    padding: 8px;
+    transition: background-color .3s ease;
+}
+
+.ignite-social-icon:hover {
+    background-color: #F59321;
+}
+
+/* Footer section */
+.ignite-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0.01rem 0;
+    width: 100%;
+}

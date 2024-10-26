@@ -1,0 +1,132 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    height: 100vh;
+}
+
+/* Container Styles */
+.container {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+h1 span {
+    color: #ff9000;
+}
+
+/* Paragraph Styles */
+p {
+    color: #6c757d;
+    font-size: 12px;
+    margin-bottom: 14px;
+}
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 14px;
+    position: relative;
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.input-container i {
+    position: absolute;
+    color: #cccccc;
+    font-size: 13px;
+    left: 7px;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.form-group input::placeholder {
+    color: #9da0a3;
+    padding-left: 15px;
+}
+
+.form-group input:focus {
+    border-color: #ff9000;
+    outline: none;
+}
+
+/* Form Check Styles */
+.form-check {
+    margin-bottom: 12px;
+}
+
+.form-check input {
+    margin-right: 5px;
+}
+
+.form-check label {
+    font-size: 14px;
+}
+
+.form-check a {
+    color: #ff9000;
+}
+
+.form-check a:hover {
+    text-decoration: none;
+}
+
+/* Button Styles */
+.btn {
+    display: block;
+    background-color: #ff9000;
+    color: #fff;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #e68400;
+}
+
+/* Error Message Styles */
+.error-message {
+    color: red;
+    font-size: 0.8rem;
+    display: block;
+    margin-top: 2px;
+}
