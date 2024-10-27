@@ -68,7 +68,7 @@ function inputFunctions() {
 
             if (savedData.name === nameInput && savedData.email === emailInput && savedData.password === passInput) {
                 // Values match, redirect to landing page
-                window.location.href = 'landing.html';
+                window.location.href = 'index.html';
             } else {
                 // Values do not match, save the new data and show an error message
                 saveFormData();
